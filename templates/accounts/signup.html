@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrierung</title>
+  <style>
+    /* Einfache, eingebaute Styles */
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .container { max-width: 400px; margin: auto; }
+    label, input { display: block; width: 100%; margin-bottom: 10px; }
+    button { padding: 8px 16px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Registrieren</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Registrieren</button>
+    </form>
+    <p>Schon ein Konto? <a href="{% url 'login' %}">Hier einloggen</a></p>
+  </div>
+</body>
+</html>
