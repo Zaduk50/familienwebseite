@@ -39,7 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #eigene Apps
     'accounts',
+    'tailwind',
+    'homepage',
+    'django_browser_reload',
 ]
+
+TAILWIND_APP_NAME = 'homepage'
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
